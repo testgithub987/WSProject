@@ -1,0 +1,50 @@
+{
+  "id": 1,
+  "firstname": "Katerina",
+  "languages": [
+    {
+      "lang": "en",
+      "knowledge": "proficient"
+    },
+    {
+      "lang": "fr",
+      "knowledge": "advanced"
+    }
+  ],
+  "job": {
+    "site": "www.javacodegeeks.com",
+    "name": "Java Code Geeks"
+  },
+  "result": 
+        [
+            {
+                "id": 1,
+                "country": "USA",
+                "name": "Alabama",
+                "abbr": "AL",
+                "area": "135767SKM",
+                "largest_city": "Birmingham",
+                "capital": "Montgomery"
+            },
+            
+           {
+                "id": 2,
+                "country": "USA",
+                "name": "Alaska",
+                "abbr": "AK",
+                "area": "1723337SKM",
+                "largest_city": "Anchorage",
+                "capital": "Juneau"
+            },
+            {
+                "id": 3,
+                "country": "USA",
+                "name": "Arizona",
+                "abbr": "AZ",
+                "area": "113594SKM",
+                "largest_city": "Phoenix",
+                "capital": "Phoenix"
+            }
+
+         ]
+}

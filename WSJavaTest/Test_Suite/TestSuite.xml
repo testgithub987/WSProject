@@ -1,0 +1,26 @@
+<?xml version = "1.0"?>
+<Suite Description = "WebService Test Suite">
+   <TestCase execute = "YES">
+   	  <TC_ID>1</TC_ID>
+      <TC_DESCRIPTION>Sign In Test2(Valid credentials)</TC_DESCRIPTION>
+      <Method_Name>post</Method_Name>
+      <Reguest_Body>{"email":"mlrssuperadmin@gmail.com","password":"P@ssw0rd"}</Reguest_Body>
+      <Request_Headers>Content-Type=application/json</Request_Headers>
+      <EndPoint_URL>/users/signin</EndPoint_URL>
+      <Expected_Status_Code>200</Expected_Status_Code>
+      <Expected_ElementPath></Expected_ElementPath>
+      <Expected_Value>{"email":"mlrssuperadmin@gmail.com","token":"E8B45293F62B0626DB67EF00DF89BDE5C7B556665B835CA7E625288C395060DE"}</Expected_Value>      
+   </TestCase>
+   
+      <TestCase execute = "no">
+   	  <TC_ID>2</TC_ID>
+      <TC_DESCRIPTION>Sign In Test2(Valid credentials)</TC_DESCRIPTION>
+      <Method_Name>post</Method_Name>
+      <Reguest_Body>{"email":"mlrssuperadmin@gmail.com","password":"P@ssw0rd"}</Reguest_Body>
+      <Request_Headers>Content-Type=application/json</Request_Headers>
+      <EndPoint_URL>/users/signin</EndPoint_URL>
+      <Expected_Status_Code>200</Expected_Status_Code>
+      <Expected_ElementPath></Expected_ElementPath>
+      <Expected_Value>{"email":"mlrssuperadmin@gmail.com","token":"E8B45293F62B0626DB67EF00DF89BDE5C7B556665B835CA7E625288C395060DE"}</Expected_Value>      
+   </TestCase>
+</Suite>

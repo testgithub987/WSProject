@@ -1,0 +1,27 @@
+[  
+    {  
+        "execute":"yes",     
+       	"Testcase_Testdata":       
+        [  
+    		{
+               "TC_ID": "1",
+               "EXECUTE": "Yes",
+               "TC_DESCRIPTION": "REST Test - returns both largest city and capital based on user input for state name or state abbreviation",
+               "Method_Name": "GET",
+               "Request_Headers": "Content-Type=application/json",
+               "EndPoint_URL": "/state/get/USA/all",
+               "Expected_Status_Code": "200",
+               "Expected_ElementPath": "USA#Alaska",
+			}
+        ]              
+   }
+   
+]
+
+
+
+
+
+
+
+

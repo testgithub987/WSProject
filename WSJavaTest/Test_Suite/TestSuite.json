@@ -1,0 +1,248 @@
+[  
+    {  
+        "execute":"yes",     
+       	"Testcase_Testdata":       
+        [  
+    		{
+               "TC_ID": "1",
+               "EXECUTE": "Yes",
+               "TC_DESCRIPTION": "Get Request",
+               "HEADER_PARAMETERS": " ",
+               "REQUEST_BODY": " ",
+               "Method_Name": "GET",
+               "Reguest_Body": " ",
+               "Request_Headers": "Accept=application/json#mlrs-token=EAB1E2D218AD14C6E8836FCBEC157DBB4D687D8F4C8041174DD1115AD3D9CE8F#mlrs-email=mlrsadminlabone@gmail.com",
+               "EndPoint_URL": "/tests",
+               "Expected_Status_Code": "200",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": "",
+               "Expected_Value": "(200, '{\"Test\": [{\"status\": 1001, \"description\": \"Updated with comments\", \"id\": 1001, \"lab\": 1, \"name\": \"Blood Test\"}, {\"status\": 1001, \"description\": \"Blood Group Test\", \"id\": 1201, \"lab\": 1, \"name\": \"Blood Group\"}, {\"status\": 1001, \"description\": \"Blood Sugar Test\", \"id\": 1211, \"lab\": 1, \"name\": \"Blood Sugar\"}, {\"status\": 1001, \"description\": \"Liver Function Test (LFT)\", \"id\": 1221, \"lab\": 1, \"name\": \"Liver Function Test\"}]}')"
+			}
+        ]              
+   },
+   
+   {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+	           "TC_ID": "2",
+	           "EXECUTE": "No",
+	           "TC_DESCRIPTION": "Get Single Test(/tests/<Test Number>)",
+	           "HEADER_PARAMETERS": " ",
+	           "REQUEST_BODY": " ",
+	           "Method_Name": "GET",
+	           "Reguest_Body": " ",
+	           "Request_Headers": "Content-Type=application/json#mlrs-token=C8F10CBC4A2348B06B484CF729FF1603E3D7BFFD9DD0354BD2A172902CF20460#[email protected]",
+	           "EndPoint_URL": "/tests/{testid}",
+	           "Expected_Status_Code": "200",
+	           "MESSAGE_VALIDATION": " ",
+	           "Expected_ElementPath": " ",
+	           "Expected_Value": "{\"email\":\"mlrssuperadmin@gmail.com\",\"token\":\"C8F10CBC4A2348B06B484CF729FF1603E3D7BFFD9DD0354BD2A172902CF20460\"}"	           
+	     	}
+        ]
+    },
+  
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "3",
+               "EXECUTE": "Yes",
+               "TC_DESCRIPTION": "Sign In Test2(Valid credentials)",
+               "HEADER_PARAMETERS": "200",
+               "REQUEST_BODY": " ",
+               "Method_Name": "POST",
+               "Reguest_Body": "{\"email\":\"mlrssuperadmin@gmail.com\",\"password\":\"P@ssw0rd\"}",
+               "Request_Headers": "Content-Type=application/json",
+               "EndPoint_URL": "/users/signin",
+               "Expected_Status_Code": "200",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": "",
+               "Expected_Value": "{\"email\":\"mlrssuperadmin@gmail.com\",\"token\":\"E8B45293F62B0626DB67EF00DF89BDE5C7B556665B835CA7E625288C395060DE\"}"                          
+             }
+        ]
+    },      
+    
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "4",
+               "EXECUTE": "Yes",
+               "TC_DESCRIPTION": "Sign In Test3(If request does not have any input)",
+               "HEADER_PARAMETERS": " ",
+               "REQUEST_BODY": " ",
+               "Method_Name": "POST",
+               "Reguest_Body": " ",
+               "Request_Headers": "Content-Type=application/json",
+               "EndPoint_URL": "/users/signin",
+               "Expected_Status_Code": "400",
+               "REST_URL": " ",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": "code=4-100#message=Validation Error : Your request cannot be processed because of the following missing field(s) : email",
+               "Expected_Value": " "
+               
+         	}
+
+        ]
+    },
+   
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "5",
+               "EXECUTE": "Yes",
+               "TC_DESCRIPTION": "Sign In Test4(email is missing and password is present.)",
+               "HEADER_PARAMETERS": "400",
+               "REQUEST_BODY": " ",
+               "Method_Name": "POST",
+               "Reguest_Body": " ",
+               "Request_Headers": "password",
+               "EndPoint_URL": "Content-Type=application/json",
+               "Expected_Status_Code": "/users/signin",
+               "REST_URL": " ",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": " ",
+               "Expected_Value": "code=4-100#message=Validation Error : Your request cannot be processed because of the following missing field(s) : email."
+               
+        	}
+
+        ]
+    },
+    
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "6",
+               "EXECUTE": "Yes",
+               "TC_DESCRIPTION": "Sign In Test5(email is present and password is missing)",
+               "HEADER_PARAMETERS": "400",
+               "REQUEST_BODY": " ",
+               "Method_Name": "POST",
+               "Reguest_Body": " ",
+               "Request_Headers": "password",
+               "EndPoint_URL": "Content-Type=application/json",
+               "Expected_Status_Code": "/users/signin",
+               "REST_URL": " ",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": " ",
+               "Expected_Value": "code=4-100#message=Validation Error : Your request cannot be processed because of the following missing field(s) : password."
+               
+         	}
+
+        ]
+    },
+    
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "7",
+               "EXECUTE": "Yes",
+               "TC_DESCRIPTION": "Sign In Test6(Invalid credentials)",
+               "HEADER_PARAMETERS": "401",
+               "REQUEST_BODY": " ",
+               "Method_Name": "POST",
+               "Reguest_Body": " ",
+               "Request_Headers": "password",
+               "EndPoint_URL": "Content-Type=application/json",
+               "Expected_Status_Code": "/users/signin",
+               "REST_URL": " ",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": " ",
+               "Expected_Value": "code=4-200#message=Unauthorized Access."
+               
+         	}
+
+        ]
+    },
+    
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "8",
+               "EXECUTE": "No",
+               "TC_DESCRIPTION": "Add Test",
+               "HEADER_PARAMETERS": "/tests",
+               "REQUEST_BODY": "200",
+               "Method_Name": "POST",
+               "Reguest_Body": "{ ",
+               "Request_Headers": " ",
+               "EndPoint_URL": " ",
+               "Expected_Status_Code": "Content-Type=application/json#mlrs-token=C8F10CBC4A2348B06B484CF729FF1603E3D7BFFD9DD0354BD2A172902CF20460#[email protected]",
+               "REST_URL": " ",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": " ",
+               "Expected_Value": " "
+               
+         	}
+
+        ]
+    },  
+    
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "9",
+               "EXECUTE": "No",
+               "TC_DESCRIPTION": "Delete Test",
+               "HEADER_PARAMETERS": " ",
+               "REQUEST_BODY": " ",
+               "Method_Name": "DELETE",
+               "Reguest_Body": " ",
+               "Request_Headers": "Content-Type=application/json#mlrs-token=C8F10CBC4A2348B06B484CF729FF1603E3D7BFFD9DD0354BD2A172902CF20460#[email protected]",
+               "EndPoint_URL": "/tests/{testid}",
+               "Expected_Status_Code": "200",
+               "REST_URL": " ",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": " ",
+               "Expected_Value": " "
+               
+         	}
+
+        ]
+    },  
+    
+    {  
+        "execute":"no",
+        "Testcase_Testdata":
+        [
+	        {
+               "TC_ID": "10",
+               "EXECUTE": "No",
+               "TC_DESCRIPTION": "Update Test",
+               "HEADER_PARAMETERS": "200",
+               "REQUEST_BODY": " ",
+               "Method_Name": "PUT",
+               "Reguest_Body": "{ ",
+               "Request_Headers": " ",
+               "EndPoint_URL": "Content-Type=application/json#mlrs-token=C8F10CBC4A2348B06B484CF729FF1603E3D7BFFD9DD0354BD2A172902CF20460#[email protected]",
+               "Expected_Status_Code": "/tests/{testid}",
+               "REST_URL": " ",
+               "MESSAGE_VALIDATION": " ",
+               "Expected_ElementPath": " ",
+               "Expected_Value": "status=1002"             
+         	}
+        ]
+    }
+]
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:73 - ########### Intialization Script - Start ###########
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:171 - Test Case ID : 1
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:173 - Test Case Description : REST Test - returns both largest city and capital based on user input for state name or state abbreviation
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:175 - Method Name : GET
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:177 - Request Headers : Content-Type=application/json
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:179 - End Point URL : /state/get/USA/all
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:181 - Expected Status Code : 200
+2018-02-28 14:12:35 INFO  ExecuteTestSuite:183 - Expected Element Path in JSon Response : USA#Alaska
+2018-02-28 14:12:36 INFO  Rest:71 - Get Request response code is 200

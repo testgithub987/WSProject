@@ -1,0 +1,62 @@
+[
+	{
+           "TC_ID": "1",
+           "EXECUTE": "Yes",
+           "TC_DESCRIPTION": "Get Request",
+           "HEADER_PARAMETERS": " ",
+           "REQUEST_BODY": " ",
+           "Method_Name": "GET",
+           "Reguest_Body": " ",
+           "Request_Headers": "Accept=application/json#mlrs-token=EAB1E2D218AD14C6E8836FCBEC157DBB4D687D8F4C8041174DD1115AD3D9CE8F#mlrs-email=mlrsadminlabone@gmail.com",
+           "EndPoint_URL": "/tests",
+           "Expected_Status_Code": "200",
+           "MESSAGE_VALIDATION": " ",
+           "Expected_ElementPath": "",
+           "Expected_Value": "(200, '{\"Test\": [{\"status\": 1001, \"description\": \"Updated with comments\", \"id\": 1001, \"lab\": 1, \"name\": \"Blood Test\"}, {\"status\": 1001, \"description\": \"Blood Group Test\", \"id\": 1201, \"lab\": 1, \"name\": \"Blood Group\"}, {\"status\": 1001, \"description\": \"Blood Sugar Test\", \"id\": 1211, \"lab\": 1, \"name\": \"Blood Sugar\"}, {\"status\": 1001, \"description\": \"Liver Function Test (LFT)\", \"id\": 1221, \"lab\": 1, \"name\": \"Liver Function Test\"}]}')"
+	},
+	{
+           "TC_ID": "2",
+           "EXECUTE": "Yes",
+           "TC_DESCRIPTION": "POST Request",
+           "HEADER_PARAMETERS": " ",
+           "REQUEST_BODY": " ",
+           "Method_Name": "POST",
+           "Reguest_Body": "{\"status\": 1001, \"firstName\": \"StaffSamplea\", \"mobile\": \"7760257251\", \"lastName\": \"MLRS\", \"role\": 1003, \"gender\": \"M\", \"email\": \"asdf@gmail.com\"}",
+           "Request_Headers": "Accept=application/json#mlrs-token=EAB1E2D218AD14C6E8836FCBEC157DBB4D687D8F4C8041174DD1115AD3D9CE8F#mlrs-email=mlrsadminlabone@gmail.com",
+           "EndPoint_URL": "/staff",
+           "Expected_Status_Code": "201",
+           "MESSAGE_VALIDATION": " ",
+           "Expected_ElementPath": " ",
+           "Expected_Value": "(201, '{\"status\": 1001, \"firstName\": \"StaffSamplea\", \"mobile\": \"7760257251\", \"lastName\": \"MLRS\", \"role\": 1003, \"gender\": \"M\", \"email\": \"asdf@gmail.com\"}')"	           
+	},
+	{
+           "TC_ID": "3",
+           "EXECUTE": "Yes",
+           "TC_DESCRIPTION": "PUT Request",
+           "HEADER_PARAMETERS": " ",
+           "REQUEST_BODY": " ",
+           "Method_Name": "PUT",
+           "Reguest_Body": "{\"firstName\":\"StaffSample\",  \"lastName\":\"MLRS\",  \"mobile\":\"7760257257\",  \"gender\":\"M\"}",
+           "Request_Headers": "Accept=application/json#mlrs-token=EAB1E2D218AD14C6E8836FCBEC157DBB4D687D8F4C8041174DD1115AD3D9CE8F#mlrs-email=mlrsadminlabone@gmail.com",
+           "EndPoint_URL": "/staff/asdf@gmail.com",
+           "Expected_Status_Code": "200",
+           "MESSAGE_VALIDATION": " ",
+           "Expected_ElementPath": "",
+           "Expected_Value": "(200, '{\"status\": 1001, \"firstName\": \"StaffSample\", \"mobile\": \"7760257257\", \"lastName\": \"MLRS\", \"role\": 1003, \"gender\": \"M\", \"email\": \"asdf@gmail.com\"}')"
+	},
+	{
+           "TC_ID": "4",
+           "EXECUTE": "Yes",
+           "TC_DESCRIPTION": "DELETE Request",
+           "HEADER_PARAMETERS": " ",
+           "REQUEST_BODY": " ",
+           "Method_Name": "DELETE",
+           "Reguest_Body": "{\"firstName\":\"StaffSample\",  \"lastName\":\"MLRS\",  \"mobile\":\"7760257257\",  \"gender\":\"M\"}",
+           "Request_Headers": "Accept=application/json#mlrs-token=EAB1E2D218AD14C6E8836FCBEC157DBB4D687D8F4C8041174DD1115AD3D9CE8F#mlrs-email=mlrsadminlabone@gmail.com",
+           "EndPoint_URL": "/staff/asdf@gmail.com",
+           "Expected_Status_Code": "200",
+           "MESSAGE_VALIDATION": " ",
+           "Expected_ElementPath": "",
+           "Expected_Value": "(201, '{\"status\": \"Success\"}')"
+	}
+]     

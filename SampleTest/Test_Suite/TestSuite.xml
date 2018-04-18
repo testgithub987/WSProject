@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<Suite Description = "WebService Test Suite">
+   <TestCase execute = "YES">
+   	  <TC_ID>1</TC_ID>
+      <TC_DESCRIPTION>REST Test - returns both largest city and capital based on user input for state name or state abbreviation</TC_DESCRIPTION>
+      <Method_Name>GET</Method_Name>
+      <Request_Headers>Content-Type=application/json</Request_Headers>
+      <EndPoint_URL>/state/get/USA/all</EndPoint_URL>
+      <Expected_Status_Code>200</Expected_Status_Code>
+      <Expected_ElementPath>USA#Alaska</Expected_ElementPath>
+   </TestCase>
+</Suite>

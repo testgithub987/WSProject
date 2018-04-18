@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Rest" duration-ms="2578" started-at="2018-02-28T08:41:57Z" finished-at="2018-02-28T08:41:59Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="2578" started-at="2018-02-28T08:41:57Z" finished-at="2018-02-28T08:41:59Z">
+      <class name="Webservice.ExecuteTestSuite">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Webservice.ExecuteTestSuite@feb3fa]" name="beforeSuite" is-config="true" duration-ms="811" started-at="2018-02-28T14:11:56Z" finished-at="2018-02-28T14:11:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="runSuite()[pri:0, instance:Webservice.ExecuteTestSuite@feb3fa]" name="runSuite" duration-ms="2546" started-at="2018-02-28T14:11:57Z" finished-at="2018-02-28T14:11:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runSuite -->
+      </class> <!-- Webservice.ExecuteTestSuite -->
+    </test> <!-- Test -->
+  </suite> <!-- Rest -->
+</testng-results>
